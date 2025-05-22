@@ -1,0 +1,11 @@
+.searchbar{
+    margin-bottom: 40px;
+}
+.sbLabel{
+    display: flex;
+    flex-direction: column;
+}
+
+.sbInput{
+    width: 200px;
+}

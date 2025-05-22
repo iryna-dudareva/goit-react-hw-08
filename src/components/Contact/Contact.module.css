@@ -1,0 +1,32 @@
+.contactWrapper{
+    width: 280px;
+    height: 58px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.itWrapper{
+    display: flex;
+    gap: 4px;
+
+}
+
+.deleteBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+
+}

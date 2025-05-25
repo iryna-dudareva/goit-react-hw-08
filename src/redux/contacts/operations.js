@@ -1,15 +1,16 @@
-import axios from 'axios'
+/*import axios from 'axios'*/
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { authInstance } from '../auth/operations'
 
-const instance = axios.create({
+/*const instance = axios.create({
     baseURL: 'https://connections-api.goit.global/',
-  });
+  });*/
 
 export const getContacts = createAsyncThunk(
     'contacts/getAll',
     async (__, thunkAPI) => {
         try {
-            const res = await instance.get('/contacts');
+            const res = await authInstance.get('/contacts');
             return res.data;
         }
         catch (e) {
@@ -22,7 +23,7 @@ export const addContact = createAsyncThunk(
     'contacts/addContact',
     async ({ name, number }, thunkAPI) => {
         try {
-            const res = await instance.post('/contacts', { name, number });
+            const res = await authInstance.post('/contacts', { name, number });
             return res.data;
         }
         catch (e) {
@@ -35,7 +36,7 @@ export const deleteContact = createAsyncThunk(
     'contacts/deleteContact',
     async (id, thunkAPI) => {
         try {
-            await instance.delete(`/contacts/${id}`);
+            await authInstance.delete(`/contacts/${id}`);
             return id;
         }
         catch (e) {

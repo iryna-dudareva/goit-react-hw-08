@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 
 
 
-const authInstance = axios.create({
+export const authInstance = axios.create({
   baseURL: 'https://connections-api.goit.global/',
 });
 
